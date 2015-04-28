@@ -42,11 +42,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           user: 'vagrant',
           rubies: ["2.2.2", "jruby-1.7.19","rbx-2.5.2"],
           global: "2.2.2",
-          gems: {
-            '2.2.2' => [ { 'name' => 'bundler' } ],
-            'jruby-1.7.19' => [ { 'name' => 'bundler' }],
-            'rbx-2.5.2' => [ { 'name' => 'bundler'}]
-          }
         }]
       },
       mysql: {
