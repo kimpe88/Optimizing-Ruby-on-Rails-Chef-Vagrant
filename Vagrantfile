@@ -20,14 +20,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Use Chef Solo to provision our virtual machine
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+    chef.cookbooks_path = ["cookbooks"]
 
     chef.add_recipe "apt"
     chef.add_recipe "nodejs"
     chef.add_recipe "ruby_build"
     chef.add_recipe "libffi-dev"
     chef.add_recipe "java"
-    chef.add_recipe "rubinius_dependencies"
     chef.add_recipe "rbenv::user"
     chef.add_recipe "rbenv::vagrant"
     chef.add_recipe "mysql::server"
@@ -40,7 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       rbenv: {
         user_installs: [{
           user: 'vagrant',
-          rubies: ["2.2.2", "jruby-1.7.19","rbx-2.5.2"],
+          rubies: ["2.2.2", "jruby-1.7.19"],
           global: "2.2.2",
         }]
       },

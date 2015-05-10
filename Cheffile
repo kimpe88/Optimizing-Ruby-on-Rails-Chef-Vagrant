@@ -2,7 +2,6 @@ site "http://community.opscode.com/api/v1"
 
 cookbook 'apt'
 cookbook 'build-essential'
-cookbook 'rubinius_dependencies', :path => './own_cookbooks/rubinius_dependencies'
 cookbook 'mysql', '5.5.3'
 cookbook 'ruby_build'
 cookbook 'nodejs'
