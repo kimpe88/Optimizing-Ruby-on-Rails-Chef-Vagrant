@@ -1,0 +1,64 @@
+DEPENDENCIES
+  apt
+  ark (~> 0.9.0)
+  build-essential
+  java (~> 1.31.0)
+  jmeter-custom
+    path: cookbooks/jmeter-custom
+  libffi-dev
+    git: https://github.com/deanperry/chef-libffi-dev.git
+    revision: ac6ff041a80b427f5de5df0fb07729157d59a51b
+  mongodb-10gen (~> 0.4.1)
+  mysql (= 5.5.3)
+  nodejs
+  postgresql (~> 3.4.18)
+  rbenv
+    git: https://github.com/RayMangum/chef-rbenv.git
+    revision: bd518e992ebcc0a5280ef6a4e9ef5128554b27bf
+  ruby_build
+  vim
+
+GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  apt (2.7.0)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  build-essential (2.2.3)
+  chef-sugar (3.1.0)
+  chef_handler (1.1.8)
+  homebrew (1.12.0)
+    build-essential (>= 2.1.2)
+  java (1.31.0)
+  jmeter-custom (0.1.0)
+    ark (>= 0.0.0)
+  libffi-dev (0.0.1)
+  mongodb-10gen (0.4.1)
+    apt (>= 0.0.0)
+  mysql (5.5.3)
+    yum-mysql-community (>= 0.0.0)
+  nodejs (2.4.0)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    homebrew (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  openssl (4.0.0)
+    chef-sugar (>= 0.0.0)
+  postgresql (3.4.18)
+    apt (>= 1.9.0)
+    build-essential (>= 0.0.0)
+    openssl (~> 4.0.0)
+  rbenv (0.7.3)
+    java (> 1.4.0)
+    ruby_build (>= 0.0.0)
+  ruby_build (0.8.0)
+  vim (1.1.2)
+  windows (1.37.0)
+    chef_handler (>= 0.0.0)
+  yum (3.6.0)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
+  yum-mysql-community (0.1.17)
+    yum (>= 3.0)

@@ -1,0 +1,8 @@
+name             'jmeter-custom'
+maintainer       'Kim Persson'
+maintainer_email 'kimpersson88@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures jmeter-custom'
+long_description 'Installs/Configures jmeter-custom'
+version          '0.1.0'
+depends          'ark'

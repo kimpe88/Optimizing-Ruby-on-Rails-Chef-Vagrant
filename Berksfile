@@ -1,5 +1,4 @@
-site "http://community.opscode.com/api/v1"
-
+source 'https://supermarket.chef.io'
 cookbook 'apt'
 cookbook 'build-essential'
 cookbook 'mysql', '5.5.3'
@@ -10,4 +9,6 @@ cookbook 'rbenv', git: 'https://github.com/RayMangum/chef-rbenv.git'
 cookbook 'vim'
 cookbook 'java', '~> 1.31.0'
 cookbook 'mongodb-10gen', '~> 0.4.1'
-
+cookbook 'ark', '~> 0.9.0'
+cookbook 'jmeter-custom', path: './cookbooks/jmeter-custom'
+cookbook 'postgresql', '~> 3.4.18'

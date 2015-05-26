@@ -18,6 +18,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Setup a shared folder for code editing outside vm
   config.vm.synced_folder "app", "/home/vagrant/app"
 
+  # User berkshelf for provisioning
+  config.berkshelf.enabled = true
+
+  # Forward x11 for jmeter
+  config.ssh.forward_x11 = true
+
   # Use Chef Solo to provision our virtual machine
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks"]
@@ -32,6 +38,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "mysql::server"
     chef.add_recipe "mysql::client"
     chef.add_recipe "mongodb-10gen"
+    chef.add_recipe "ark"
+    chef.add_recipe "jmeter-custom"
 
     # Install Ruby 2.2.1 and Bundler
     # Set an empty root password for MySQL to make things simple
