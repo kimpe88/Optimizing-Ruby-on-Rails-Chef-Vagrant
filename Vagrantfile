@@ -40,6 +40,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "mongodb-10gen"
     chef.add_recipe "ark"
     chef.add_recipe "jmeter-custom"
+    chef.add_recipe "chef-dk"
+    chef.add_recipe "nmon"
 
     # Install Ruby 2.2.1 and Bundler
     # Set an empty root password for MySQL to make things simple
