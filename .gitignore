@@ -1,3 +1,5 @@
 tmp
 app
 .vagrant
+/berks-cookbooks
+!/berks-cookbooks/jmeter-custom
