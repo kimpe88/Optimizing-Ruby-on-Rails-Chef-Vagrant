@@ -22,8 +22,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # User berkshelf for provisioning
   config.berkshelf.enabled = true
 
-  # Forward x11 for jmeter
-  config.ssh.forward_x11 = true
+  config.ssh.private_key_path = "~/.ssh/id_rsa"
+  config.ssh.forward_agent = true
+
 
   # Use Chef Solo to provision our virtual machine
   config.vm.provision :chef_solo do |chef|
